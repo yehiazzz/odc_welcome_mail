@@ -11,10 +11,12 @@
 
 - git pull https://github.com/yehiazzz/odc_welcome_mail.git
 - composer install
--  copy .env example to .env and put your db data
+-  copy .env example to .env and put your db data and mail
 - create database and run php artisan migrate:fresh --seed
 - php artisan ser 
-- register
+- register 
+- admin mail : admin@example.com
+- admin pass : 123456
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
