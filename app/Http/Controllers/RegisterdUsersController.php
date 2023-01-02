@@ -14,7 +14,7 @@ class RegisterdUsersController extends Controller
      */
     public function index()
     {
-        $users = User::all();
+        $users = User::where('is_admin', 0)->latest()->get();
         return view('admin.registers', compact('users'));
     }
 
