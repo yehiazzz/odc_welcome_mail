@@ -28,8 +28,8 @@
                                 </tr>
                             </thead>
 
-                            <tbody class="bg-white divide-y divide-gray-200 divide-solid">
-                                @foreach ($users as $user)
+                            <tbody class="bg-dark divide-y divide-gray-200 divide-solid">
+                                @forelse ($users as $user)
                                     <tr class="bg-white">
                                         <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
                                             {{ $user->name }}
@@ -41,7 +41,9 @@
                                             {{ $user->created_at }}
                                         </td>
                                     </tr>
-                                @endforeach
+                                @empty
+                                    <td colspan="3">Sorry No Users Regigisted Yet .</td>
+                                @endforelse
                             </tbody>
                         </table>
                     </div>
